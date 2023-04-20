@@ -19,7 +19,7 @@
                 <Chart:NumericalAxis Interval="1" CrossesAt="-1" Name="primary"
                                      ShowMajorGridLines="False" >
                     <Chart:NumericalAxis.LabelStyle>
-                        <Chart:ChartAxisLabelStyle FontSize="20" Margin="-40" TextColor="Black"/>
+                        <Chart:ChartAxisLabelStyle FontSize="20" Margin="{OnPlatform WinUI='-40', MacCatalyst='-40', iOS='-35', Android='-15'}" TextColor="Black"/>
                     </Chart:NumericalAxis.LabelStyle>
                     <Chart:NumericalAxis.MajorTickStyle>
                         <Chart:ChartAxisTickStyle StrokeWidth="0"/>
