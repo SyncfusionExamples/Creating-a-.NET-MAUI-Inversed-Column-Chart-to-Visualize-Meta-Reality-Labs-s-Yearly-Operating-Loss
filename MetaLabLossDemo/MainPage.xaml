@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MetaLabLossDemo.MainPage"
+             xmlns:Chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:local="clr-namespace:MetaLabLossDemo">
+
+    <Grid Margin="15">
+        <Grid.BindingContext>
+            <local:MetaLabLossDetails/>
+        </Grid.BindingContext>
+        <Chart:SfCartesianChart x:Name="chart">
+            <Chart:SfCartesianChart.Title>
+                <Label Text="Operating loss of Meta's Reality Labs division"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Title" TextColor="#FF5E768E"/>
+            </Chart:SfCartesianChart.Title>
+            <Chart:SfCartesianChart.XAxes>
+                <Chart:NumericalAxis Interval="1" CrossesAt="-1" Name="primary"
+                                     ShowMajorGridLines="False" >
+                    <Chart:NumericalAxis.LabelStyle>
+                        <Chart:ChartAxisLabelStyle FontSize="20" Margin="-40" TextColor="Black"/>
+                    </Chart:NumericalAxis.LabelStyle>
+                    <Chart:NumericalAxis.MajorTickStyle>
+                        <Chart:ChartAxisTickStyle StrokeWidth="0"/>
+                    </Chart:NumericalAxis.MajorTickStyle>
+                    <Chart:NumericalAxis.AxisLineStyle>
+                        <Chart:ChartLineStyle Stroke="Black"/>
+                    </Chart:NumericalAxis.AxisLineStyle>
+                </Chart:NumericalAxis>
+            </Chart:SfCartesianChart.XAxes>
+            <Chart:SfCartesianChart.YAxes>
+                <Chart:NumericalAxis Maximum="0" 
+                                     IsVisible="False" ShowMajorGridLines="False"/>
+            </Chart:SfCartesianChart.YAxes>
+            <Chart:ColumnSeries XBindingPath="Year" XAxisName="primary"
+                                Fill="#FF0A3B7E"
+                                YBindingPath="Loss"
+                                ItemsSource="{Binding LossDetails}"
+                                ShowDataLabels="True">
+                <Chart:ColumnSeries.DataLabelSettings>
+                    <Chart:CartesianDataLabelSettings>
+                        <Chart:CartesianDataLabelSettings.LabelStyle>
+                            <Chart:ChartDataLabelStyle FontSize="20" LabelFormat="$0.0B" />
+                        </Chart:CartesianDataLabelSettings.LabelStyle>
+                    </Chart:CartesianDataLabelSettings>
+                </Chart:ColumnSeries.DataLabelSettings>
+            </Chart:ColumnSeries>
+        </Chart:SfCartesianChart>
+    </Grid>
+
+</ContentPage>
