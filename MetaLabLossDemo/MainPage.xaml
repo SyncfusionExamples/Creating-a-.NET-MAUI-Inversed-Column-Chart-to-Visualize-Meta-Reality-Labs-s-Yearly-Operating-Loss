@@ -11,7 +11,7 @@
         </Grid.BindingContext>
         <Chart:SfCartesianChart x:Name="chart">
             <Chart:SfCartesianChart.Title>
-                <Label Text="Operating loss of Meta's Reality Labs division"
+                <Label Text="Operating Loss of Meta's Reality Labs Division"
                        HorizontalTextAlignment="Center"
                        FontSize="Title" TextColor="#FF5E768E"/>
             </Chart:SfCartesianChart.Title>
