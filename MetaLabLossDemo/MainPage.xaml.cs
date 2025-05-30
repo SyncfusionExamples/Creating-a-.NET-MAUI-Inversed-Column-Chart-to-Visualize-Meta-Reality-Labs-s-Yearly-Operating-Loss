@@ -1,10 +1,13 @@
-﻿namespace MetaLabLossDemo;
-
-public partial class MainPage : ContentPage
+﻿namespace MetaLabLossDemo
 {
-	public MainPage()
-	{
-		InitializeComponent();
-	}
-}
+    public partial class MainPage : ContentPage
+    {
 
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+    }
+
+}

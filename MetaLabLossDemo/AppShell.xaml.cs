@@ -1,9 +1,10 @@
-﻿namespace MetaLabLossDemo;
-
-public partial class AppShell : Shell
+﻿namespace MetaLabLossDemo
 {
-	public AppShell()
-	{
-		InitializeComponent();
-	}
+    public partial class AppShell : Shell
+    {
+        public AppShell()
+        {
+            InitializeComponent();
+        }
+    }
 }
